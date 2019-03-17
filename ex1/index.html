@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <p id="days"></p>
+    <p id="timer"></p>
+    <script>
+        var thoigian = new Date();
+        var thutuNgay = thoigian.getDay();
+        var time = thoigian.getHours() + ":"+ thoigian.getMinutes() +":"+ thoigian.getSeconds();
+
+        
+     
+        var day_name = "";
+        switch (thutuNgay) {
+            case 0:
+                day_name = 'Chủ nhật';
+                break;
+            case 1:
+                day_name = 'Thứ Hai';
+                break;
+            case 2:
+                day_name = 'Thứ Ba';
+                break;
+            case 3:
+                day_name = 'Thứ Tứ';
+                break;
+            case 4:
+                day_name = 'Thứ Năm';
+                break;
+            case 5:
+                day_name = 'Thứ Sáu';
+                break;
+            case 7:
+                day_name = 'Thứ Bảy';
+                break;
+        }
+        document.getElementById('days').innerHTML = "Hôm nay là : " + day_name;
+        document.getElementById('timer').innerHTML = "Thời gian hiện tại: " + time;
+    </script>
+</body>
+
+</html>
